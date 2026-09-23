@@ -1,0 +1,500 @@
+/* Variabler */
+:root {
+  --morkgron: #16301f;
+  --gron: #3c6b4a;
+  --gron-mork: #2c5138;
+  --bla: #2e6a7c;
+  --ljusgron: #eef2ec;
+  --vit: #ffffff;
+  --text: #22292a;
+  --text-ljus: #414c4a;
+  --linje: #d8ded9;
+
+  --sidbredd: 1200px;
+  --radie: 3px;
+}
+
+/* Grundinställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    background-color: var(--vit);
+    color: var(--text);
+    font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+ 
+h1, h2, h3 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--morkgron);
+    letter-spacing: -0.01em;
+}
+ 
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; }
+ 
+p + p {
+    margin-top: 16px;
+}
+ 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ 
+a {
+    color: var(--bla);
+}
+/* Tangentbordsnavigering */
+a:focus-visible {
+    outline: 3px solid var(--bla);
+    outline-offset: 3px;
+}
+ 
+/* Hoppa-till-länk för tangentbordsnavigering */
+.hoppa-till {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    z-index: 20;
+    background-color: var(--morkgron);
+    color: var(--vit);
+    padding: 12px 20px;
+    text-decoration: none;
+}
+ 
+.hoppa-till:focus {
+    left: 0;
+}
+ 
+/* Återanvändbar knapp */
+.knapp {
+    display: inline-block;
+    background-color: var(--gron);
+    color: var(--vit);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: var(--radie);
+    transition: background-color 0.2s ease;
+}
+ 
+.knapp:hover,
+.knapp:focus {
+    background-color: var(--gron-mork);
+}
+ 
+/* Sidhuvud och navigation - Mobilanpassad vertikal navigering */
+.sidhuvud {
+    background-color: var(--vit);
+    border-bottom: 1px solid var(--linje);
+}
+ 
+/* Flexbox: kolumn på mobil */
+.sidhuvud_rad {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.logotyp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: var(--morkgron);
+}
+ 
+.logotyp_bild {
+    width: 44px;
+    height: 44px;
+}
+ 
+.logotyp_namn {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+ 
+/* Flexbox: vertikal meny på mobil */
+.huvudmeny_lista {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+ 
+.huvudmeny_lista li {
+    border-top: 1px solid var(--linje);
+}
+ 
+.huvudmeny_lista a {
+    display: block;
+    padding: 14px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+ 
+.huvudmeny_lista a:hover,
+.huvudmeny_lista a:focus {
+    background-color: var(--ljusgron);
+    color: var(--morkgron);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+}
+
+.hero_bild {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+} 
+
+.hero_innehall {
+    padding: 32px 20px 40px;
+    text-align: center;
+}
+
+.hero_ingress {
+    font-size: 17px;
+    color: var(--text-ljus);
+    margin: 16px 0 28px;
+}
+
+/*Introduktion */
+.intro {
+    padding: 48px 20px;
+    border-top: 1px solid var(--linje);
+}
+
+.intro_text {
+    max-width: 704px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro_text h2 {
+    margin-bottom: 20px;
+}
+
+.intro _text p {
+    color: var(--text-ljus);
+}
+
+/* Aktiviteter */
+.aktiviteter {
+    background-color: var(--ljusgron);
+    padding: 48px 20px; 
+}
+
+.aktiviteter_rubrik {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Flexbox: kolumn på mobil */
+.kort-rad {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.kort {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vit);
+    border: 1px solid var(--linje);
+    border-radius: var(--radie);
+    overflow: hidden;
+}
+ 
+.kort_bild {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+}
+ 
+.kort_text {
+    padding: 20px;
+}
+ 
+.kort_text h3 {
+    margin-bottom: 8px;
+}
+ 
+.kort_text p {
+    color: var(--text-ljus);
+    font-size: 15px;
+}
+
+/* Avslutande sektion */
+/* Flexbox: text och knapp under varandra på mobil */
+.planera {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+    padding: 48px 20px;
+    text-align: center;
+}
+ 
+.planera_text h2 {
+    margin-bottom: 16px;
+}
+ 
+.planera_text p {
+    color: var(--text-ljus);
+}
+ 
+/* Footer */
+.sidfot {
+    background-color: var(--morkgron);
+    color: #cfd9d1;
+    padding: 48px 20px 32px;
+}
+ 
+/* Flexbox: kolumn på mobil */
+.sidfot_rad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.sidfot_varumarke {
+    flex: 1 1 100%;
+    text-align: center;
+}
+ 
+.sidfot_kolumn {
+    flex: 1 1 40%;
+}
+ 
+.sidfot_logotyp {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+}
+ 
+.sidfot_namn {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--vit);
+}
+ 
+.sidfot_citat {
+    font-style: italic;
+}
+ 
+.sidfot_kolumn h2 {
+    font-size: 17px;
+    color: var(--vit);
+    margin-bottom: 12px;
+}
+ 
+.sidfot_lista {
+    list-style: none;
+}
+ 
+.sidfot_lista li + li {
+    margin-top: 6px;
+}
+ 
+.sidfot_lista a {
+    color: #cfd9d1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+ 
+.sidfot_lista a:hover,
+.sidfot_lista a:focus {
+    color: var(--vit);
+}
+ 
+.sidfot_rattigheter {
+    max-width: var(--sidbredd);
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+    color: #a7b5ab;
+}
+
+/* Större skärm >768px */
+@media (min-width: 768px) {
+ 
+    h1 { font-size: 48px; }
+    h2 { font-size: 34px; }
+ 
+    /* --- Navigationen blir horisontell --- */
+    .sidhuvud_rad {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 0 32px;
+    }
+ 
+    .logotyp {
+        padding: 16px 0;
+    }
+ 
+    .huvudmeny_lista {
+        flex-direction: row;
+        gap: 32px;
+    }
+ 
+    .huvudmeny_lista li {
+        border-top: none;
+    }
+ 
+    .huvudmeny_lista a {
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+    }
+ 
+    .huvudmeny_lista a:hover,
+    .huvudmeny_lista a:focus {
+        background-color: transparent;
+        border-bottom-color: var(--gron);
+    }
+ 
+    /* Hero: texten ligger ovanpå bilden */
+    .hero {
+        display: flex;
+        align-items: center;
+        min-height: 512px;
+    }
+ 
+    .hero_bild {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+ 
+    /* Mörk toning av texten på bilden */
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(10, 26, 16, 0.78) 0%, rgba(10, 26, 16, 0.45) 45%, rgba(10, 26, 16, 0) 75%);
+        
+    }
+ 
+    .hero_innehall {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: var(--sidbredd);
+        margin: 0 auto;
+        padding: 64px 32px;
+        text-align: left;
+    }
+ 
+    .hero_rubrik {
+        max-width: 14ch;
+        color: var(--vit);
+    }
+ 
+    .hero_ingress {
+        max-width: 34ch;
+        color: #e6ece7;
+        font-size: 18px;
+    }
+ 
+    /* Intro */
+    .intro {
+        padding: 72px 32px;
+    }
+ 
+    /* Aktiviteter */
+    .aktiviteter {
+        padding: 72px 32px;
+    }
+ 
+    .aktiviteter__rubrik {
+        margin-bottom: 48px;
+    }
+ 
+    .kort-rad {
+        flex-direction: row;
+    }
+ 
+    .kort {
+        flex: 1 1 0;
+    }
+ 
+    /* Avslutande sektion */
+    .planera {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+        padding: 72px 32px;
+        text-align: left;
+    }
+ 
+    .planera__text {
+        max-width: 608px;
+    }
+ 
+    .planera__knapp {
+        flex-shrink: 0;
+    }
+ 
+    /* Sidfot i tre kolumner */
+    .sidfot {
+        padding: 64px 32px 32px;
+    }
+ 
+    .sidfot_rad {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 48px;
+    }
+ 
+    .sidfot_varumarke {
+        flex: 1.5 1 auto;
+        text-align: left;
+    }
+ 
+    .sidfot_logotyp {
+        margin: 0 0 12px;
+    }
+}
+ 
+/* Respekterar minskad rörelse */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+ 
+    * {
+        transition: none !important;
+    }
+}
