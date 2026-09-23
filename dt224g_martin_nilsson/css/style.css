@@ -403,6 +403,7 @@ a:focus-visible {
         position: absolute;
         inset: 0;
         background: linear-gradient(90deg, rgba(10, 26, 16, 0.78) 0%, rgba(10, 26, 16, 0.45) 45%, rgba(10, 26, 16, 0) 75%);
+        
     }
  
     .hero_innehall {
@@ -415,12 +416,12 @@ a:focus-visible {
         text-align: left;
     }
  
-    .hero__rubrik {
+    .hero_rubrik {
         max-width: 14ch;
         color: var(--vit);
     }
  
-    .hero__ingress {
+    .hero_ingress {
         max-width: 34ch;
         color: #e6ece7;
         font-size: 18px;
@@ -471,18 +472,18 @@ a:focus-visible {
         padding: 64px 32px 32px;
     }
  
-    .sidfot__rad {
+    .sidfot_rad {
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 48px;
     }
  
-    .sidfot__varumarke {
+    .sidfot_varumarke {
         flex: 1.5 1 auto;
         text-align: left;
     }
  
-    .sidfot__logotyp {
+    .sidfot_logotyp {
         margin: 0 0 12px;
     }
 }
