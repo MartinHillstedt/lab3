@@ -104,8 +104,8 @@ a:focus-visible {
     border-bottom: 1px solid var(--linje);
 }
  
+/* Flexbox: kolumn på mobil */
 .sidhuvud_rad {
-    /* Flexbox: kolumn på mobil */
     display: flex;
     flex-direction: column;
     max-width: var(--sidbredd);
@@ -133,8 +133,8 @@ a:focus-visible {
     letter-spacing: 0.01em;
 }
  
+/* Flexbox: vertikal meny på mobil */
 .huvudmeny_lista {
-    /* Flexbox: vertikal meny på mobil */
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -156,4 +156,190 @@ a:focus-visible {
 .huvudmeny_lista a:focus {
     background-color: var(--ljusgron);
     color: var(--morkgron);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+}
+
+.hero_bild {
+    width: 100%;
+    height: 224px;
+    object-fit: cover;
+} 
+
+.hero_innehall {
+    padding: 32px 20px 40px;
+    text-align: center;
+}
+
+.hero_ingress {
+    font-size: 17px;
+    color: var(--text-ljus);
+    margin: 16px 0 28px;
+}
+
+/*Introduktion */
+.intro {
+    padding: 48px 20px;
+    border-top: 1px solid var(--linje);
+}
+
+.intro_text {
+    max-width: 704px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro_text h2 {
+    margin-bottom: 20px;
+}
+
+.intro _text p {
+    color: var(--text-ljus);
+}
+
+/* Aktiviteter */
+.aktiviteter {
+    background-color: var(--ljusgron);
+    padding: 48px 20px; 
+}
+
+.aktiviteter_rubrik {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Flexbox: kolumn på mobil */
+.kort-rad {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.kort {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vit);
+    border: 1px solid var(--linje);
+    border-radius: var(--radie);
+    overflow: hidden;
+}
+ 
+.kort_bild {
+    width: 100%;
+    height: 192px;
+    object-fit: cover;
+}
+ 
+.kort_text {
+    padding: 20px;
+}
+ 
+.kort_text h3 {
+    margin-bottom: 8px;
+}
+ 
+.kort_text p {
+    color: var(--text-ljus);
+    font-size: 15px;
+}
+
+/* Avslutande sektion */
+/* Flexbox: text och knapp under varandra på mobil */
+.planera {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+    padding: 48px 20px;
+    text-align: center;
+}
+ 
+.planera_text h2 {
+    margin-bottom: 16px;
+}
+ 
+.planera_text p {
+    color: var(--text-ljus);
+}
+ 
+/* Footer */
+.sidfot {
+    background-color: var(--morkgron);
+    color: #cfd9d1;
+    padding: 48px 20px 32px;
+}
+ 
+/* Flexbox: kolumn på mobil */
+.sidfot_rad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.sidfot_varumarke {
+    flex: 1 1 100%;
+    text-align: center;
+}
+ 
+.sidfot_kolumn {
+    flex: 1 1 40%;
+}
+ 
+.sidfot_logotyp {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+}
+ 
+.sidfot_namn {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--vit);
+}
+ 
+.sidfot_citat {
+    font-style: italic;
+}
+ 
+.sidfot_kolumn h2 {
+    font-size: 17px;
+    color: var(--vit);
+    margin-bottom: 12px;
+}
+ 
+.sidfot_lista {
+    list-style: none;
+}
+ 
+.sidfot_lista li + li {
+    margin-top: 6px;
+}
+ 
+.sidfot_lista a {
+    color: #cfd9d1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+ 
+.sidfot_lista a:hover,
+.sidfot_lista a:focus {
+    color: var(--vit);
+}
+ 
+.sidfot_rattigheter {
+    max-width: var(--sidbredd);
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 14px;
+    color: #a7b5ab;
 }
