@@ -1,0 +1,60 @@
+/* Variabler */
+:root {
+  --morkgron: #16301f;
+  --gron: #3c6b4a;
+  --gron-mork: #2c5138;
+  --bla: #2e6a7c;
+  --ljusgron: #eef2ec;
+  --vit: #ffffff;
+  --text: #22292a;
+  --text-ljus: #414c4a;
+  --linje: #d8ded9;
+
+  --sidbredd: 1200px;
+  --radie: 3px;
+}
+
+/* Grundinställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    background-color: var(--vit);
+    color: var(--text);
+    font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+ 
+h1, h2, h3 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--morkgron);
+    letter-spacing: -0.01em;
+}
+ 
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; }
+ 
+p + p {
+    margin-top: 16px;
+}
+ 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ 
+a {
+    color: var(--bla);
+}
