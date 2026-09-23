@@ -58,3 +58,102 @@ img {
 a {
     color: var(--bla);
 }
+/* Tangentbordsnavigering */
+a:focus-visible {
+    outline: 3px solid var(--bla);
+    outline-offset: 3px;
+}
+ 
+/* Hoppa-till-länk för tangentbordsnavigering */
+.hoppa-till {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    z-index: 20;
+    background-color: var(--morkgron);
+    color: var(--vit);
+    padding: 12px 20px;
+    text-decoration: none;
+}
+ 
+.hoppa-till:focus {
+    left: 0;
+}
+ 
+/* Återanvändbar knapp */
+.knapp {
+    display: inline-block;
+    background-color: var(--gron);
+    color: var(--vit);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: var(--radie);
+    transition: background-color 0.2s ease;
+}
+ 
+.knapp:hover,
+.knapp:focus {
+    background-color: var(--gron-mork);
+}
+ 
+/* Sidhuvud och navigation - Mobilanpassad vertikal navigering */
+.sidhuvud {
+    background-color: var(--vit);
+    border-bottom: 1px solid var(--linje);
+}
+ 
+.sidhuvud_rad {
+    /* Flexbox: kolumn på mobil */
+    display: flex;
+    flex-direction: column;
+    max-width: var(--sidbredd);
+    margin: 0 auto;
+}
+ 
+.logotyp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: var(--morkgron);
+}
+ 
+.logotyp_bild {
+    width: 44px;
+    height: 44px;
+}
+ 
+.logotyp_namn {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+ 
+.huvudmeny_lista {
+    /* Flexbox: vertikal meny på mobil */
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+ 
+.huvudmeny_lista li {
+    border-top: 1px solid var(--linje);
+}
+ 
+.huvudmeny_lista a {
+    display: block;
+    padding: 14px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+}
+ 
+.huvudmeny_lista a:hover,
+.huvudmeny_lista a:focus {
+    background-color: var(--ljusgron);
+    color: var(--morkgron);
+}
